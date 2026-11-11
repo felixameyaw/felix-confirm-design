@@ -1,0 +1,174 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us | Felix Ameyaw Designs</title>
+
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+    background:#080808;
+    color:white;
+    font-family:Arial,sans-serif;
+}
+
+header {
+    padding:25px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:20px;
+    border-bottom:1px solid #292929;
+}
+
+.logo {
+    color:#d6b45c;
+    font-size:22px;
+    font-weight:bold;
+    letter-spacing:2px;
+}
+
+nav a {
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+    font-size:14px;
+}
+
+nav a:hover, nav a.active { color:#d6b45c; }
+
+.about {
+    max-width:950px;
+    margin:80px auto;
+    padding:0 25px;
+    text-align:center;
+}
+
+.about h1 {
+    font-size:clamp(35px,5vw,55px);
+    margin-bottom:20px;
+}
+
+.about h1 span { color:#d6b45c; }
+
+.gold-line {
+    width:65px;
+    height:3px;
+    background:#d6b45c;
+    margin:25px auto;
+}
+
+.about p {
+    color:#bbb;
+    font-size:17px;
+    line-height:2;
+    margin-bottom:20px;
+}
+
+.values {
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+    margin-top:60px;
+}
+
+.value-card {
+    padding:30px 20px;
+    background:#151515;
+    border:1px solid #292929;
+    border-radius:10px;
+}
+
+.value-card h3 {
+    color:#d6b45c;
+    margin-bottom:15px;
+}
+
+.value-card p {
+    font-size:14px;
+    line-height:1.8;
+}
+
+footer {
+    text-align:center;
+    padding:25px;
+    border-top:1px solid #292929;
+    color:#777;
+    font-size:13px;
+}
+
+@media(max-width:650px) {
+    header { justify-content:center; text-align:center; }
+    nav a { margin:0 7px; }
+    .values { grid-template-columns:1fr; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">FELIX AMEYAW</div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="designs.html">Designs</a>
+        <a href="about.html" class="active">About Us</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<section class="about">
+
+    <h1>ABOUT <span>US</span></h1>
+    <div class="gold-line"></div>
+
+    <p>
+        Welcome to Felix Ameyaw Designs, where creativity meets excellence.
+        We are passionate about transforming ideas into beautiful,
+        professional and memorable visual designs.
+    </p>
+
+    <p>
+        Our focus is on creating designs that communicate clearly,
+        capture attention and leave lasting impressions.
+        Every project is an opportunity to bring creativity and imagination
+        to life.
+    </p>
+
+    <p>
+        At Felix Ameyaw Designs, we believe that great design is more
+        than just appearance. It is about delivering quality,
+        originality and satisfaction.
+    </p>
+
+    <div class="values">
+
+        <div class="value-card">
+            <h3>OUR MISSION</h3>
+            <p>To turn creative ideas into outstanding visual experiences.</p>
+        </div>
+
+        <div class="value-card">
+            <h3>OUR VISION</h3>
+            <p>To build a trusted creative brand known for quality and originality.</p>
+        </div>
+
+        <div class="value-card">
+            <h3>OUR VALUES</h3>
+            <p>Creativity, professionalism, originality and customer satisfaction.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+    © 2026 Felix Ameyaw Designs. All Rights Reserved.
+</footer>
+
+</body>
+</html>
