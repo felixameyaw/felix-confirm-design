@@ -4,276 +4,232 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Felix Ameyaw Designs | Creative Studio</title>
-<meta name="description" content="Premium graphic design portfolio by Felix Ameyaw Designs. Explore flyers, posters, branding and creative artwork.">
+<title>Felix Ameyaw Designs | Creative Portfolio</title>
 
 <style>
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-html { scroll-behavior: smooth; }
+html {
+    scroll-behavior: smooth;
+}
 
 body {
-  background: #090909;
-  color: #fff;
-  font-family: Arial, sans-serif;
-}
-
-:root {
-  --gold: #d4af63;
-  --white: #fff;
-  --muted: #aaa;
+    background: #080808;
+    color: #f5f0e6;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 25px 8%;
-  border-bottom: 1px solid #332b1c;
-  background: #090909;
+    padding: 25px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #292319;
 }
 
 .logo {
-  color: var(--gold);
-  font-family: Georgia, serif;
-  font-size: 24px;
-  letter-spacing: 2px;
-}
-
-nav {
-  display: flex;
-  gap: 25px;
+    color: #d6b56d;
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 2px;
 }
 
 nav a {
-  color: white;
-  text-decoration: none;
-  font-size: 12px;
-  letter-spacing: 1px;
+    color: #eee;
+    text-decoration: none;
+    margin-left: 22px;
+    font-size: 13px;
 }
 
-nav a:hover { color: var(--gold); }
+nav a:hover {
+    color: #d6b56d;
+}
 
 .hero {
-  min-height: 570px;
-  padding: 90px 8%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  background: radial-gradient(circle, #392d19, #090909 72%);
+    min-height: 430px;
+    padding: 100px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #17130d, #080808 70%);
 }
 
-.hero small {
-  color: var(--gold);
-  letter-spacing: 6px;
-  margin-bottom: 25px;
+.hero p {
+    color: #d6b56d;
+    letter-spacing: 5px;
+    font-size: 12px;
+    margin-bottom: 20px;
 }
 
 .hero h1 {
-  font-family: Georgia, serif;
-  font-weight: normal;
-  font-size: clamp(42px, 7vw, 78px);
-  max-width: 900px;
-  line-height: 1.15;
+    font-size: clamp(38px, 7vw, 75px);
+    margin-bottom: 20px;
 }
 
-.hero h1 span { color: var(--gold); }
-
-.hero p {
-  color: #ccc;
-  max-width: 600px;
-  line-height: 1.9;
-  margin: 25px 0 35px;
+.hero h1 span {
+    color: #d6b56d;
 }
 
-.button {
-  display: inline-block;
-  background: var(--gold);
-  color: #090909;
-  padding: 16px 30px;
-  text-decoration: none;
-  font-size: 12px;
-  font-weight: bold;
-  letter-spacing: 2px;
-  transition: .3s;
+.hero .intro {
+    color: #c5c0b7;
+    letter-spacing: 1px;
+    line-height: 1.8;
+    max-width: 600px;
 }
 
-.button:hover {
-  background: #f1d99e;
-  transform: translateY(-3px);
+.gold-button {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 15px 30px;
+    background: #d6b56d;
+    color: #080808;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 12px;
 }
 
-.section {
-  padding: 90px 8%;
+section {
+    padding: 75px 8%;
 }
 
-.heading {
-  text-align: center;
-  margin-bottom: 50px;
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
 }
 
-.heading small {
-  color: var(--gold);
-  letter-spacing: 5px;
-  font-size: 11px;
+.section-title p {
+    color: #d6b56d;
+    letter-spacing: 4px;
+    font-size: 11px;
+    margin-bottom: 12px;
 }
 
-.heading h2 {
-  font-family: Georgia, serif;
-  font-size: 43px;
-  font-weight: normal;
-  margin-top: 15px;
-}
-
-.heading p {
-  color: var(--muted);
-  margin-top: 15px;
-  line-height: 1.7;
+.section-title h2 {
+    font-size: 32px;
 }
 
 .gallery {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 25px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 25px;
 }
 
 .design-card {
-  background: #151515;
-  border: 1px solid #382e1c;
-  overflow: hidden;
-  transition: .3s;
+    background: #141414;
+    border: 1px solid #30291c;
+    padding: 12px;
+    transition: 0.3s;
 }
 
 .design-card:hover {
-  transform: translateY(-7px);
-  border-color: var(--gold);
+    transform: translateY(-7px);
+    border-color: #d6b56d;
 }
 
 .design-card img {
-  width: 100%;
-  height: 350px;
-  display: block;
-  object-fit: contain;
-  background: #111;
-  cursor: pointer;
+    width: 100%;
+    height: 320px;
+    object-fit: contain;
+    display: block;
+    background: #050505;
+    cursor: pointer;
 }
 
-.design-info {
-  padding: 22px;
-}
-
-.design-info h3 {
-  color: var(--gold);
-  font-family: Georgia, serif;
-  font-weight: normal;
-  font-size: 21px;
-}
-
-.design-info p {
-  color: #aaa;
-  font-size: 13px;
-  margin-top: 10px;
+.design-card h3 {
+    text-align: center;
+    padding: 17px 5px 8px;
+    color: #d6b56d;
+    font-size: 14px;
+    letter-spacing: 1px;
 }
 
 .about {
-  background: #121212;
-  text-align: center;
+    background: #111;
+    text-align: center;
 }
 
-.about-content {
-  max-width: 750px;
-  margin: auto;
-}
-
-.about-content p {
-  color: #bbb;
-  line-height: 2;
-  margin-top: 20px;
+.about p {
+    max-width: 700px;
+    margin: auto;
+    color: #c7c1b6;
+    line-height: 2;
 }
 
 .contact {
-  text-align: center;
-  padding: 100px 8%;
-}
-
-.contact h2 {
-  font-family: Georgia, serif;
-  font-size: clamp(30px, 5vw, 48px);
-  font-weight: normal;
+    text-align: center;
 }
 
 .contact p {
-  color: #aaa;
-  margin: 25px 0 35px;
-  line-height: 1.8;
+    color: #c7c1b6;
+    margin-top: 15px;
+    line-height: 1.8;
+}
+
+.whatsapp {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 16px 30px;
+    background: #d6b56d;
+    color: #080808;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 1px;
 }
 
 footer {
-  text-align: center;
-  padding: 30px;
-  border-top: 1px solid #332b1c;
-  color: #888;
-  font-size: 12px;
+    text-align: center;
+    padding: 25px;
+    color: #888;
+    border-top: 1px solid #292319;
+    font-size: 12px;
 }
 
-footer span { color: var(--gold); }
-
-#lightbox {
-  display: none;
-  position: fixed;
-  inset: 0;
-  z-index: 1000;
-  background: #000f;
-  align-items: center;
-  justify-content: center;
-  padding: 25px;
-}
-
-#lightbox img {
-  max-width: 95%;
-  max-height: 90vh;
-  object-fit: contain;
-}
-
-#lightbox button {
-  position: absolute;
-  top: 15px;
-  right: 25px;
-  background: none;
-  border: none;
-  color: white;
-  font-size: 40px;
-  cursor: pointer;
-}
-
-@media(max-width: 800px) {
-  .gallery { grid-template-columns: repeat(2, 1fr); }
-}
-
-@media(max-width: 550px) {
-  header {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  nav {
-    gap: 13px;
-    flex-wrap: wrap;
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    inset: 0;
+    background: rgba(0,0,0,0.95);
     justify-content: center;
-  }
+    align-items: center;
+    padding: 20px;
+}
 
-  nav a { font-size: 10px; }
+.lightbox img {
+    max-width: 95%;
+    max-height: 90vh;
+    object-fit: contain;
+}
 
-  .gallery { grid-template-columns: 1fr; }
+.lightbox span {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+}
 
-  .hero { min-height: 450px; }
+@media(max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav a {
+        margin: 0 8px;
+    }
+
+    section {
+        padding: 55px 6%;
+    }
 }
 </style>
 </head>
@@ -281,144 +237,118 @@ footer span { color: var(--gold); }
 <body>
 
 <header>
-  <div class="logo">FELIX AMEYAW.</div>
-
-  <nav>
-    <a href="#home">HOME</a>
-    <a href="#gallery">PORTFOLIO</a>
-    <a href="#about">ABOUT</a>
-    <a href="#contact">CONTACT</a>
-  </nav>
+    <div class="logo">FELIX AMEYAW</div>
+    <nav>
+        <a href="#home">HOME</a>
+        <a href="#portfolio">PORTFOLIO</a>
+        <a href="#about">ABOUT</a>
+        <a href="#contact">CONTACT</a>
+    </nav>
 </header>
 
 <section class="hero" id="home">
-  <small>WELCOME TO MY CREATIVE STUDIO</small>
-
-  <h1>Designing Beyond <span>Ordinary.</span></h1>
-
-  <p>
-    Creativity, elegance and originality.
-    Discover exceptional graphic designs crafted
-    to make every idea stand out.
-  </p>
-
-  <a href="#gallery" class="button">EXPLORE MY DESIGNS</a>
+    <p>CREATIVITY • DESIGN • EXCELLENCE</p>
+    <h1>Felix Ameyaw <span>Designs</span></h1>
+    <div class="intro">
+        Bringing ideas to life through creative and professional graphic design.
+        Quality designs that make your brand stand out.
+    </div>
+    <a href="#portfolio" class="gold-button">EXPLORE MY WORK</a>
 </section>
 
-<section class="section" id="gallery">
-
-  <div class="heading">
-    <small>MY WORKS</small>
-    <h2>Creative Portfolio</h2>
-    <p>Explore my collection of professional graphic designs.</p>
-  </div>
-
-  <div class="gallery">
-
-    <!-- IMAGE 1: design1.jpg -->
-    <div class="design-card">
-      <img src="design1.jpg" alt="Design 1" onclick="showImage(this)">
-      <div class="design-info">
-        <h3>Creative Design 01</h3>
-        <p>Graphic Design</p>
-      </div>
+<section id="portfolio">
+    <div class="section-title">
+        <p>MY CREATIVE WORK</p>
+        <h2>Selected Designs</h2>
     </div>
 
-    <!-- IMAGE 2: design2.jpg -->
-    <div class="design-card">
-      <img src="design2.jpg" alt="Design 2" onclick="showImage(this)">
-      <div class="design-info">
-        <h3>Creative Design 02</h3>
-        <p>Flyer Design</p>
-      </div>
-    </div>
+    <div class="gallery">
 
-    <!-- IMAGE 3: design3.jpg -->
-    <div class="design-card">
-      <img src="design3.jpg" alt="Design 3" onclick="showImage(this)">
-      <div class="design-info">
-        <h3>Creative Design 03</h3>
-        <p>Poster Design</p>
-      </div>
-    </div>
+        <!-- DESIGN 1 -->
+        <div class="design-card">
+            <img src="design1.jpg.jpg" alt="Design 1" onclick="showImage(this)">
+            <h3>DESIGN 01</h3>
+        </div>
 
-    <!-- IMAGE 4: design4.jpg -->
-    <div class="design-card">
-      <img src="design4.jpg" alt="Design 4" onclick="showImage(this)">
-      <div class="design-info">
-        <h3>Creative Design 04</h3>
-        <p>Branding</p>
-      </div>
-    </div>
+        <!-- DESIGN 2 -->
+        <div class="design-card">
+            <img src="design2.jpg" alt="Design 2" onclick="showImage(this)">
+            <h3>DESIGN 02</h3>
+        </div>
 
-    <!-- IMAGE 5: design5.jpg -->
-    <div class="design-card">
-      <img src="design5.jpg" alt="Design 5" onclick="showImage(this)">
-      <div class="design-info">
-        <h3>Creative Design 05</h3>
-        <p>Visual Artwork</p>
-      </div>
-    </div>
+        <!-- DESIGN 3 -->
+        <div class="design-card">
+            <img src="design3.jpg" alt="Design 3" onclick="showImage(this)">
+            <h3>DESIGN 03</h3>
+        </div>
 
-    <!-- IMAGE 6: design6.jpg -->
-    <div class="design-card">
-      <img src="design6.jpg" alt="Design 6" onclick="showImage(this)">
-      <div class="design-info">
-        <h3>Creative Design 06</h3>
-        <p>Premium Graphic Design</p>
-      </div>
-    </div>
+        <!-- DESIGN 4 -->
+        <div class="design-card">
+            <img src="design4.jpg.jpeg" alt="Design 4" onclick="showImage(this)">
+            <h3>DESIGN 04</h3>
+        </div>
 
-  </div>
+        <!-- DESIGN 5 -->
+        <div class="design-card">
+            <img src="design5.jpg" alt="Design 5" onclick="showImage(this)">
+            <h3>DESIGN 05</h3>
+        </div>
+
+        <!-- DESIGN 6 -->
+        <div class="design-card">
+            <img src="design6.jpg" alt="Design 6" onclick="showImage(this)">
+            <h3>DESIGN 06</h3>
+        </div>
+
+    </div>
 </section>
 
-<section class="section about" id="about">
-  <div class="about-content">
-    <div class="heading">
-      <small>GET TO KNOW THE DESIGNER</small>
-      <h2>About Felix Ameyaw</h2>
+<section class="about" id="about">
+    <div class="section-title">
+        <p>GET TO KNOW ME</p>
+        <h2>About My Work</h2>
     </div>
-
     <p>
-      Felix Ameyaw Designs is a creative graphic design
-      studio committed to producing professional,
-      attractive and memorable visual experiences.
-      Every project reflects creativity, passion
-      and attention to detail.
+        Welcome to Felix Ameyaw Designs. I am passionate about transforming
+        ideas into beautiful visual experiences. From flyers and posters to
+        promotional graphics, my goal is to deliver creative designs with
+        quality, originality and attention to detail.
     </p>
-  </div>
 </section>
 
 <section class="contact" id="contact">
-  <h2>Let's Create Something Extraordinary.</h2>
-  <p>Have a project in mind? Let's bring your ideas to life.</p>
+    <div class="section-title">
+        <p>LET'S CREATE SOMETHING AMAZING</p>
+        <h2>Get In Touch</h2>
+    </div>
 
-  <!-- REPLACE THE Xs WITH YOUR WHATSAPP NUMBER -->
-  <a class="button"
-     href="https://wa.me/233XXXXXXXXX"
-     target="_blank">
-    CONTACT ME ON WHATSAPP
-  </a>
+    <p>Have a project in mind? Contact me directly on WhatsApp.</p>
+
+    <a class="whatsapp"
+       href="https://wa.me/233539951843"
+       target="_blank"
+       rel="noopener noreferrer">
+       CONTACT ME ON WHATSAPP
+    </a>
 </section>
 
 <footer>
-  © 2026 <span>FELIX AMEYAW DESIGNS</span>.
-  ALL RIGHTS RESERVED.
+    © 2026 FELIX AMEYAW DESIGNS. ALL RIGHTS RESERVED.
 </footer>
 
-<div id="lightbox" onclick="closeImage()">
-  <button onclick="closeImage()">×</button>
-  <img id="preview" src="" alt="Full design">
+<div class="lightbox" id="lightbox" onclick="closeImage()">
+    <span>&times;</span>
+    <img id="largeImage" src="" alt="Enlarged design">
 </div>
 
 <script>
-function showImage(img) {
-  document.getElementById("preview").src = img.src;
-  document.getElementById("lightbox").style.display = "flex";
+function showImage(image) {
+    document.getElementById("lightbox").style.display = "flex";
+    document.getElementById("largeImage").src = image.src;
 }
 
 function closeImage() {
-  document.getElementById("lightbox").style.display = "none";
+    document.getElementById("lightbox").style.display = "none";
 }
 </script>
 
