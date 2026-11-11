@@ -1,142 +1,219 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Felix Ameyaw Designs | Creative Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
 body {
-    background: #ffffff;
-    color: #fff;
-    font-family: Arial, sans-serif;
+    background: #090514;
+    color: #e2dbf8;
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Glassmorphism Background Glow Blobs */
+.bg-blob {
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(120px);
+    z-index: -1;
+    opacity: 0.6;
+}
+
+.blob-1 {
+    width: 450px;
+    height: 450px;
+    background: #7c3aed;
+    top: -100px;
+    left: -100px;
+}
+
+.blob-2 {
+    width: 500px;
+    height: 500px;
+    background: #3b0764;
+    bottom: 10%;
+    right: -150px;
+}
+
+.blob-3 {
+    width: 350px;
+    height: 350px;
+    background: #c084fc;
+    top: 40%;
+    left: 30%;
+    opacity: 0.25;
+}
+
+/* Glass Utilities */
+.glass {
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 
 header {
-    padding: 25px 8%;
+    padding: 20px 8%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #292929;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid rgba(192, 132, 252, 0.15);
+    background: rgba(9, 5, 20, 0.65);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
 }
 
 .logo {
-    color: #d6b45c;
-    font-size: 23px;
-    font-weight: bold;
-    letter-spacing: 2px;
+    color: #c084fc;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    text-shadow: 0 0 15px rgba(192, 132, 252, 0.4);
 }
 
 nav a {
-    color: white;
+    color: #cbd5e1;
     text-decoration: none;
-    margin-left: 22px;
+    margin-left: 28px;
     font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
 }
 
 nav a:hover {
-    color: #d6b45c;
+    color: #c084fc;
+    text-shadow: 0 0 10px rgba(192, 132, 252, 0.6);
 }
 
 .hero {
     text-align: center;
-    padding: 100px 20px 75px;
+    padding: 120px 20px 90px;
 }
 
 .hero h1 {
-    font-size: clamp(35px, 6vw, 65px);
+    font-size: clamp(38px, 6.5vw, 70px);
+    font-weight: 700;
     margin-bottom: 20px;
+    letter-spacing: -1px;
 }
 
 .hero h1 span {
-    color: #d6b45c;
+    background: linear-gradient(135deg, #c084fc 0%, #a855f7 50%, #e879f9 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .hero p {
-    color: #aaa;
+    color: #94a3b8;
     line-height: 1.8;
+    font-size: 17px;
 }
 
-.gold-line {
-    width: 65px;
-    height: 3px;
-    background: #d6b45c;
+.purple-glow-line {
+    width: 70px;
+    height: 4px;
+    background: linear-gradient(90deg, #7c3aed, #e879f9);
     margin: 25px auto;
+    border-radius: 2px;
+    box-shadow: 0 0 12px #a855f7;
 }
 
 section {
-    padding: 50px 8%;
+    padding: 70px 8%;
 }
 
 .section-title {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
 }
 
 .section-title h2 {
-    font-size: 32px;
-    color: #d6b45c;
+    font-size: 34px;
+    color: #f3e8ff;
     margin-bottom: 12px;
 }
 
 .section-title p {
-    color: #aaa;
+    color: #a78bfa;
+    font-size: 15px;
 }
 
 .gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
+    gap: 30px;
 }
 
 .design-card {
-    background: #151515;
-    border: 1px solid #292929;
-    border-radius: 10px;
+    border-radius: 16px;
     overflow: hidden;
-    transition: 0.3s;
+    transition: all 0.4s ease;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(192, 132, 252, 0.12);
 }
 
 .design-card:hover {
-    transform: translateY(-7px);
-    border-color: #d6b45c;
+    transform: translateY(-10px);
+    border-color: rgba(192, 132, 252, 0.4);
+    box-shadow: 0 12px 40px rgba(124, 58, 237, 0.25);
 }
 
 .design-card img {
     width: 100%;
-    height: 300px;
-    object-fit: contain;
+    height: 320px;
+    object-fit: cover;
     display: block;
-    background: #111;
+    background: rgba(15, 10, 30, 0.8);
     cursor: pointer;
+    transition: transform 0.5s ease;
+}
+
+.design-card:hover img {
+    transform: scale(1.04);
 }
 
 .design-info {
-    padding: 18px;
+    padding: 20px;
     text-align: center;
+    background: rgba(9, 5, 20, 0.7);
 }
 
 .design-info h3 {
-    color: #d6b45c;
-    font-size: 17px;
+    color: #e9d5ff;
+    font-size: 18px;
+    font-weight: 600;
 }
 
 .about {
     text-align: center;
-    background: #111;
+    border-radius: 24px;
+    margin: 40px 8%;
+    padding: 60px 40px;
     line-height: 1.9;
-    color: #bbb;
+    color: #cbd5e1;
+    font-size: 17px;
 }
 
 .about h2 {
-    color: #d6b45c;
+    color: #c084fc;
+    font-size: 32px;
     margin-bottom: 20px;
 }
 
@@ -145,31 +222,44 @@ section {
 }
 
 .contact h2 {
-    color: #d6b45c;
+    color: #f3e8ff;
+    font-size: 34px;
     margin-bottom: 18px;
+}
+
+.contact p {
+    color: #94a3b8;
+    font-size: 16px;
 }
 
 .whatsapp {
     display: inline-block;
-    margin-top: 25px;
-    padding: 15px 30px;
-    background: #ffffff;
-    color: #080808;
+    margin-top: 30px;
+    padding: 16px 36px;
+    background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
+    color: #ffffff;
     text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    border-radius: 50px;
+    box-shadow: 0 4px 25px rgba(168, 85, 247, 0.4);
+    transition: all 0.3s ease;
 }
 
 .whatsapp:hover {
-    background: #ffffff;
+    background: linear-gradient(135deg, #6d28d9 0%, #9333ea 100%);
+    box-shadow: 0 6px 35px rgba(168, 85, 247, 0.65);
+    transform: translateY(-2px);
 }
 
 footer {
-    padding: 25px;
+    padding: 30px;
     text-align: center;
-    color: #777;
-    border-top: 1px solid #292929;
-    font-size: 13px;
+    color: #64748b;
+    border-top: 1px solid rgba(192, 132, 252, 0.1);
+    font-size: 14px;
+    margin-top: 40px;
 }
 
 #lightbox {
@@ -177,25 +267,35 @@ footer {
     position: fixed;
     z-index: 1000;
     inset: 0;
-    background: rgba(0,0,0,0.95);
+    background: rgba(9, 5, 20, 0.92);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     justify-content: center;
     align-items: center;
     padding: 20px;
 }
 
 #lightbox img {
-    max-width: 95%;
-    max-height: 90vh;
+    max-width: 90%;
+    max-height: 85vh;
     object-fit: contain;
+    border-radius: 12px;
+    box-shadow: 0 0 50px rgba(168, 85, 247, 0.3);
+    border: 1px solid rgba(192, 132, 252, 0.2);
 }
 
 #lightbox span {
     position: absolute;
-    top: 20px;
-    right: 30px;
-    font-size: 40px;
+    top: 25px;
+    right: 35px;
+    font-size: 42px;
     cursor: pointer;
-    color: white;
+    color: #c084fc;
+    transition: color 0.2s;
+}
+
+#lightbox span:hover {
+    color: #e879f9;
 }
 
 @media (max-width: 800px) {
@@ -207,11 +307,11 @@ footer {
 @media (max-width: 550px) {
     header {
         flex-direction: column;
-        gap: 20px;
+        gap: 15px;
     }
 
     nav a {
-        margin: 0 8px;
+        margin: 0 10px;
     }
 
     .gallery {
@@ -227,6 +327,10 @@ footer {
 
 <body>
 
+<div class="bg-blob blob-1"></div>
+<div class="bg-blob blob-2"></div>
+<div class="bg-blob blob-3"></div>
+
 <header>
     <div class="logo">FELIX AMEYAW</div>
     <nav>
@@ -239,7 +343,7 @@ footer {
 
 <div class="hero" id="home">
     <h1>CREATIVE <span>DESIGNS</span></h1>
-    <div class="gold-line"></div>
+    <div class="purple-glow-line"></div>
     <p>Welcome to Felix Ameyaw Designs.</p>
     <p>Creative ideas. Beautiful designs. Professional results.</p>
 </div>
@@ -252,32 +356,32 @@ footer {
 
     <div class="gallery">
 
-        <div class="design-card">
+        <div class="design-card glass">
             <img src="design1.jpg.jpg" alt="Design 1" onclick="openImage(this.src)">
             <div class="design-info"><h3>Design 01</h3></div>
         </div>
 
-        <div class="design-card">
+        <div class="design-card glass">
             <img src="design2.jpg.jpg" alt="Design 2" onclick="openImage(this.src)">
             <div class="design-info"><h3>Design 02</h3></div>
         </div>
 
-        <div class="design-card">
+        <div class="design-card glass">
             <img src="design3.jpg.jpg" alt="Design 3" onclick="openImage(this.src)">
             <div class="design-info"><h3>Design 03</h3></div>
         </div>
 
-        <div class="design-card">
+        <div class="design-card glass">
             <img src="design4.jpg.jpeg" alt="Design 4" onclick="openImage(this.src)">
             <div class="design-info"><h3>Design 04</h3></div>
         </div>
 
-        <div class="design-card">
+        <div class="design-card glass">
             <img src="design5.jpg.jpg" alt="Design 5" onclick="openImage(this.src)">
             <div class="design-info"><h3>Design 05</h3></div>
         </div>
 
-        <div class="design-card">
+        <div class="design-card glass">
             <img src="design6.jpg.jpg" alt="Design 6" onclick="openImage(this.src)">
             <div class="design-info"><h3>Design 06</h3></div>
         </div>
@@ -285,7 +389,7 @@ footer {
     </div>
 </section>
 
-<section class="about" id="about">
+<section class="about glass" id="about">
     <h2>About Me</h2>
     <p>
         I am Felix Ameyaw, a creative graphic designer passionate
@@ -309,7 +413,7 @@ footer {
 </footer>
 
 <div id="lightbox" onclick="closeImage()">
-    <span>&times;</span>
+    <span>×</span>
     <img id="lightbox-img" src="" alt="Full design">
 </div>
 
