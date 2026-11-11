@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Felix Ameyaw Designs</title>
+
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+    background:#080808;
+    color:white;
+    font-family:Arial,sans-serif;
+}
+
+header {
+    padding:25px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:20px;
+    border-bottom:1px solid #292929;
+}
+
+.logo {
+    color:#d6b45c;
+    font-size:22px;
+    font-weight:bold;
+    letter-spacing:2px;
+}
+
+nav a {
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+    font-size:14px;
+}
+
+nav a:hover, nav a.active { color:#d6b45c; }
+
+.contact {
+    max-width:750px;
+    margin:90px auto;
+    padding:0 25px;
+    text-align:center;
+}
+
+.contact h1 {
+    font-size:clamp(35px,5vw,55px);
+    margin-bottom:20px;
+}
+
+.contact h1 span { color:#d6b45c; }
+
+.gold-line {
+    width:65px;
+    height:3px;
+    background:#d6b45c;
+    margin:25px auto;
+}
+
+.contact p {
+    color:#aaa;
+    font-size:16px;
+    line-height:1.9;
+}
+
+.contact-card {
+    background:#151515;
+    border:1px solid #292929;
+    border-radius:12px;
+    padding:40px 25px;
+    margin-top:40px;
+}
+
+.contact-card h2 {
+    color:#d6b45c;
+    margin-bottom:20px;
+}
+
+.whatsapp {
+    display:inline-block;
+    margin-top:25px;
+    padding:16px 30px;
+    background:#d6b45c;
+    color:#080808;
+    text-decoration:none;
+    font-weight:bold;
+    border-radius:5px;
+    transition:.3s;
+}
+
+.whatsapp:hover {
+    background:white;
+    transform:translateY(-3px);
+}
+
+.phone {
+    margin-top:20px;
+    color:#d6b45c;
+}
+
+footer {
+    text-align:center;
+    padding:25px;
+    border-top:1px solid #292929;
+    color:#777;
+    font-size:13px;
+}
+
+@media(max-width:650px) {
+    header { justify-content:center; text-align:center; }
+    nav a { margin:0 7px; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">FELIX AMEYAW</div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="designs.html">Designs</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html" class="active">Contact</a>
+    </nav>
+</header>
+
+<section class="contact">
+
+    <h1>GET IN <span>TOUCH</span></h1>
+    <div class="gold-line"></div>
+
+    <p>
+        Have a project in mind? Need a professional graphic design?
+        Let's work together and bring your ideas to life.
+    </p>
+
+    <div class="contact-card">
+        <h2>Let's Create Something Amazing</h2>
+
+        <p>Contact Felix Ameyaw Designs directly on WhatsApp.</p>
+
+        <div class="phone">0539951843</div>
+
+        <a class="whatsapp"
+           href="https://wa.me/233539951843"
+           target="_blank">
+           CHAT WITH ME ON WHATSAPP
+        </a>
+    </div>
+
+</section>
+
+<footer>
+    © 2026 Felix Ameyaw Designs. All Rights Reserved.
+</footer>
+
+</body>
+</html>
